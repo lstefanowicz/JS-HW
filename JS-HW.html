@@ -4,39 +4,43 @@
 <h1>THE AMAZING "<i>CAN I VOTE???</i>" CHECKER</h1>
 <button onclick="myFunction()">Check Age</button>
 
-<p id="demo"></p>
+<p id="text"></p>
 
 <script >    
 function myFunction() {
   var age = prompt("Please enter age");
   
-  if (age >= 35) {document.getElementById("demo").innerHTML =
+  if (age >= 35) {document.getElementById("text").innerHTML =
     vote+" "+gov; 
   } else if (age <= 34 && age >= 25 ) {
-    document.getElementById("demo").innerHTML =
+    document.getElementById("text").innerHTML =
     vote+" "+senate;
   } else if (age <= 24 && age >= 18 ) {
-    document.getElementById("demo").innerHTML =
+    document.getElementById("text").innerHTML =
     vote+"!";
   } else if (age < 18 ) {
-    document.getElementById("demo").innerHTML =
-    deny;}
-}
+    document.getElementById("text").innerHTML =
+    deny;
+  } else if (age = "" ) {
+    document.getElementById("text").innerHTML =
+    "What are you doing fool?";
+  }
+  }
 
 
 
-// var age = 17;
+// var age = 18;
 var vote = "You can vote";
 var gov = "and hold any place in government!";
 var senate = "and run for the Senate!";
 var deny = "You have no voice in the government! ";
 
 
-if ( age >= 35 ) {document.write(vote+" "+gov);
-} else if (age <= 34 && age >= 25 ) {document.write (vote+" "+senate);
-} else if (age <=24 && age >= 18) {document.write(vote+"!");
-} else if (age < 18) {document.write(deny);
-};
+// if ( age >= 35 ) {document.write(vote+" "+gov);
+// } else if (age <= 34 && age >= 25 ) {document.write (vote+" "+senate);
+// } else if (age <=24 && age >= 18) {document.write(vote+"!");
+// } else if (age < 18) {document.write(deny);
+// };
 
 </script>
 </html>
